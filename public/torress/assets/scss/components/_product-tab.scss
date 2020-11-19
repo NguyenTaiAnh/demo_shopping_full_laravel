@@ -1,0 +1,241 @@
+/*----------------------------------------*/
+/*  19 - Components - Product Tab
+/*----------------------------------------*/
+/* ---Torress's Product Tab Area--- */
+.torress-product-tab_area {
+	padding: 90px 0 0;
+	.banner-item {
+		border: 1px solid $border-color;
+		@include breakpoint (max-small) {
+			margin-bottom: 25px;
+		}
+		> a {
+			> img {
+				width: 100%;
+			}
+		}
+	}
+	.tab-section_area {
+		display: flex;
+		justify-content: space-between;
+		@include breakpoint (max-x_small) {
+			display: block;
+			text-align: center;
+		}
+		.product-tab_title {
+			> h3 {
+				margin-bottom: 0;
+				font-size: 24px;
+				font-weight: $heading-font_weight;
+				text-transform: uppercase;
+				@include breakpoint (max-x_small) {
+					padding-bottom: 20px;
+				}
+			}
+		}
+		.product-tab {
+			display: flex;
+			justify-content: center;
+			padding-bottom: 25px;
+			> ul {
+				&.product-menu {
+					> li {
+						> a {
+							padding: 0 20px;
+							display: block;
+							text-transform: uppercase;
+							@include breakpoint (max-medium) {
+								padding-left: 0;
+							}
+							> span {
+								position: relative;
+								&:before {
+									content: "";
+									width: 100%;
+									height: 2px;
+									left: 0;
+									bottom: -10px;
+									position: absolute;
+									transform: scale(0);
+									@extend %basetransition;
+									@include breakpoint (xx-small) {
+										display: none;
+									}
+								}
+							}
+							&.active {
+								> span {
+									&:before {
+										transform: scale(1);
+									}
+								}
+							}
+						}
+						&:last-child {
+							> a {
+								padding-right: 0;
+							}
+						}
+						&:hover {
+							> a {
+								> span {
+									&:before {
+										transform: scale(1);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ---Torress's Product Tab Area--- */
+.torress-product-tab_area-3 {
+	.tab-section_area {
+		@include breakpoint (max-small) {
+			display: block;
+		}
+		.product-tab_title {
+			> h3 {
+				@include breakpoint (max-small) {
+					padding-bottom: 20px;
+					text-align: center;
+				}
+			}
+		}
+		.product-tab {
+			> ul {
+				&.product-menu {
+					> li {
+						> a {
+							text-transform: capitalize;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* ---Torress's Product Tab Slider--- */
+.torress-product-tab_slider {
+	.slide-item {
+		.single-product {
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+			padding: 15px 15px 10px;
+			@include breakpoint (xx-small) {
+				display: block;
+			}
+			.product-img {
+				position: relative;
+				width: 50%;
+				@include breakpoint (xx-small) {
+					width: 100%;
+				}
+				.add-actions {
+					top: 0;
+					right: 0;
+					left: auto;
+					transform: translateX(0);
+					> ul {
+						> li {
+							> a {
+								display: block;
+								width: 40px;
+								height: 40px;
+								line-height: 40px;
+								text-align: center;
+								&:hover {
+									background-color: $primary-color;
+									color: $bg-white_color !important;
+								}
+							}
+						}
+					}
+				}
+			}
+			.product-content {
+				width: 50%;
+				@include breakpoint (xx-small) {
+					width: 100%;
+				}
+				.product-desc_info {
+					> h6 {
+						&.product-name {
+							font-size: 16px;
+						}
+					}
+					> .rating-box {
+						> ul {
+							> li {
+								> i {
+									font-size: 16px;
+								}
+							}
+						}
+					}
+				}
+			}
+			&:hover {
+				.product-img {
+					.add-actions {
+						transform: translateX(-20px);
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ---Torress's Product Tab Three--- */
+.torress-product-tab_area-3 {
+	padding: 85px 0 0;
+	.torress-product-tab_slider-2 {
+		.slide-item {
+			.single-product {
+				display: block;
+				.product-img {
+					width: auto;
+				}
+				.product-content {
+					width: auto;
+				}
+			}
+		}
+		.slick-list {
+			margin: 0 -15px;
+			.slick-slide {
+				padding: 0 15px;
+			}
+		}
+	}
+}
+/* ---Torress's Product Tab Three--- */
+.torress-product-tab_area-4 {
+	.torress-product-tab_slider-3 {
+		.slick-list {
+			margin: 0 -15px;
+			.slick-slide {
+				padding: 0 15px;
+			}
+		}
+	}
+}
+
+/* ---Torress's Product Tab Area Three--- */
+.sp-product-tab_area {
+	background-color: $bg-white_color;
+	padding: 0 0 60px;
+	.short-desc {
+		margin: 0 auto;
+		text-align: center;
+		> p {
+			margin-bottom: 0;
+			padding-bottom: 15px;
+		}
+	}
+}

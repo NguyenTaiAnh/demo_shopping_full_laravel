@@ -1,0 +1,23 @@
+/*----------------------------------------*/
+/*  14 - Components - Banner
+/*----------------------------------------*/
+.torress-banner_area {
+	padding-top: 90px;
+	.banner-item {
+		border: 1px solid $border-color;
+		> a {
+			> img {
+				width: 100%;
+			}
+		}
+	}
+	[class*="col-"] {
+		&:not(:last-child) {
+			.banner-item {
+				@include breakpoint (max-x_small) {
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}

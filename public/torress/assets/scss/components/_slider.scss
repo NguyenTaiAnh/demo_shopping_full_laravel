@@ -1,0 +1,201 @@
+/*----------------------------------------*/
+/*  11 - Components - Slider
+/*----------------------------------------*/
+/* ---Torress's Slider Area--- */
+.torress-slider_area {
+	padding: 30px 0 0;
+	.main-slider {
+		overflow: hidden;
+		.slider-content {
+			width: 100%;
+			top: 20%;
+			left: 50%;
+			transform: translateX(-50%);
+			position: absolute;
+			text-align: center;
+			z-index: 8;
+			> h4 {
+				font-size: 46px;
+				font-weight: 300;
+				text-transform: uppercase;
+				margin-bottom: 0;
+				padding-bottom: 5px;
+				@include breakpoint (max-small) {
+					font-size: 32px;
+				}
+				@include breakpoint (xx-small) {
+					font-size: 26px;
+				}
+			}
+			> h3 {
+				font-size: 46px;
+				text-transform: uppercase;
+				margin-bottom: 0;
+				padding-bottom: 25px;
+				@include breakpoint(normal) {
+					font-size: 40px;
+				}
+				@include breakpoint (max-small) {
+					font-size: 26px;
+				}
+				@include breakpoint (xx-small) {
+					font-size: 22px;
+				}
+			}
+			> a {
+				> span {
+					color: $fire-engine-red_color;
+					font-size: 28px;
+					font-weight: 600;
+					@include breakpoint (xx-small) {
+						font-size: 20px;
+					}
+				}
+			}
+			&.slider-content-2 {
+				text-align: left;
+				top: 50%;
+				left: 10%;
+				transform: translateY(-50%);
+				max-width: 40%;
+				@include breakpoint (max-large) {
+					max-width: 50%;
+				}
+				@include breakpoint (max-small) {
+					max-width: 70%;
+				}
+				@include breakpoint (xx-small) {
+					left: auto;
+				}
+				> h3 {
+					padding-bottom: 10px;
+					font-size: 28px;
+				}
+				> h5 {
+					margin-bottom: 0;
+					padding-bottom: 25px;
+				}
+			}
+		}
+	}
+	.torress-banner_area {
+		padding: 0;
+		@include breakpoint (max-medium) {
+			padding-top: 30px;
+		}
+		[class*="col-"] {
+			&:not(:last-child) {
+				.banner-item {
+					margin-bottom: 30px;
+				}
+				@include breakpoint (max-medium) {
+					.banner-item {
+						margin-bottom: 0;
+					}
+				}
+				@include breakpoint (max-x_small) {
+					.banner-item {
+						margin-bottom: 30px;
+					}
+				}
+			}
+		}
+	}
+	&.torress-slider_area-2 {
+		.main-slider {
+			.slider-content {
+				@include breakpoint (max-medium) {
+					left: 15% !important;
+				}
+				> h4 {
+					@include breakpoint (max-medium) {
+						font-size: 28px;
+					}
+				}
+				> h4 {
+					@include breakpoint (xx-small) {
+						font-size: 22px;
+					}
+				}
+				> h3 {
+					@include breakpoint (max-medium) {
+						font-size: 20px;
+					}
+				}
+				> h5 {
+					@include breakpoint (max-medium) {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* --Slider Background Image-- */
+// Home One
+.bg-1,
+.bg-2 {
+	background-image: url('../images/slider/1.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	min-height: 490px;
+	@include breakpoint (max-x_small) {
+		min-height: 320px;
+	}
+}
+.bg-2 {
+	background-image: url('../images/slider/2.jpg');
+}
+// Home Two
+.bg-3,
+.bg-4 {
+	background-image: url('../images/slider/3.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	min-height: 550px;
+	@include breakpoint (max-medium) {
+		min-height: 380px;
+	}
+}
+.bg-4 {
+	background-image: url('../images/slider/4.jpg');
+}
+
+/* ---Torress's Slider Progress Bar--- */
+.slider-progress {
+	-webkit-animation: initial;
+	animation: initial;
+	background: rgba(0, 0, 0, .3);
+	height: 5px;
+	left: 0;
+	opacity: 0.8;
+	position: absolute;
+	top: 0;
+	z-index: 4;
+}
+
+.slick-current .slider-progress {
+	-webkit-animation: timebar 8s ease-in-out 0s 1 backwards;
+	animation: timebar 8s ease-in-out 0s 1 backwards;
+}
+
+// Hiraola's Keyframes
+@-webkit-keyframes timebar {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+@keyframes timebar {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}

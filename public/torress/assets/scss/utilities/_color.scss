@@ -1,0 +1,495 @@
+/*----------------------------------------*/
+/*  04 - Utilities - Color
+/*----------------------------------------*/
+
+/* ---Backgroud Color | Only For HTML Markup---*/
+.bg--white_smoke {
+	background-color: $white-smoke_color;
+}
+
+.bg--white {
+	background-color: $bg-white_color;
+}
+
+.bg--night_rider {
+	background-color: $body-text_color;
+}
+
+.bg--silver {
+	background-color: $bg-silver_color;
+}
+
+.bg--nero {
+	background-color: $bg-nero_color;
+}
+
+.bg--charcoal {
+	background-color: $heading-color;
+}
+
+.bg--medium-turquoise {
+	background-color: $primary-color;
+}
+
+.bg--licorice {
+	background-color: $bg-licorice_color;
+}
+.bg--white-smoke {
+	background-color: $white-smoke_color;
+}
+.bg--whisper {
+	background-color: $bg-whisper_color;
+}
+.bg--mahogany {
+	background-color: $bg-mahogany_color;
+}
+.bg--supernova {
+	background-color: $bg-supernova_color;
+}
+.bg--kelly_green {
+	background-color: $bg-kelly-green_color;
+}
+.bg--tangerine_yellow {
+	background-color: $primary-color !important;
+}
+.bg--red {
+	background-color: $bg-red_color;
+}
+.bg--snow_color {
+	background-color: $bg-snow_color;
+}
+
+// All Default Color Variation Included In This Area---↓
+@for $i from 1 through length($colorList) {
+	.template-color-#{$i} {
+		// Default Anchor Tag Color
+		a {
+			&:hover {
+				color: nth($colorList, $i) !important;
+			}
+			&.torress-banner_btn {
+				&:hover {
+					color: $bg-white_color !important;
+				}
+			}
+			&.torress-btn_limerick {
+				&:hover {
+					color: $bg-white_color !important;
+				}
+			}
+			&.torress-btn_dark {
+				&:hover {
+					background-color: nth($colorList, $i);
+					color: $bg-white_color !important;
+				}
+			}
+			&.torress-btn_yellow {
+				background-color: $primary-color;
+				&:hover {
+					background-color: $heading-color;
+					color: $bg-white_color !important;
+				}
+			}
+		}
+		// Torress's Newsletters Popup
+		.popup_wrapper {
+			.test {
+				.popup_off {
+					&:hover {
+						background: nth($colorList, $i);
+					}
+				}
+			}
+			.subscribe_area {
+				.subscribe-form-group {
+					form {
+						button {
+							&:hover {
+								background: nth($colorList, $i);
+								color: $bg-white_color;
+							}
+						}
+					}
+				}
+			}
+		}
+		// Torress's Header Bottom Element Color
+		.header-bottom_area {
+			&.bg--tangerine_yellow {
+				.main-menu_area {
+					.main_nav {
+						> ul {
+							> li {
+								&.active {
+									> a {
+										color: $bg-white_color;
+									}
+								}
+								&:hover {
+									> a {
+										color: $bg-white_color !important;
+									}
+								}
+							}
+						}
+					}
+				}
+				.login-area {
+					> a {
+						&:hover {
+							color: $bg-white_color !important;
+						}
+					}
+				}
+			}
+		}
+		// Torress's Main Menu Color Variant
+		.main-menu_area {
+			.main_nav {
+				> ul {
+					> li {
+						&.active {
+							> a {
+								color: nth($colorList, $i);
+								&:before {
+									width: 100%;
+									opacity: 1;
+									background-color: nth($colorList, $i);
+								}
+							}
+						}
+						.hm-dropdown {
+							> li {
+								&.active {
+									> a {
+										color: nth($colorList, $i);
+									}
+								}
+							}
+						}
+						.torress-megamenu {
+							> li {
+								> ul {
+									> li {
+										&.active {
+											> a {
+												color: nth($colorList, $i);
+											}
+										}
+									}
+								}
+							}
+						}
+						&:hover {
+							> a {
+								color: nth($colorList, $i);
+								&:before {
+									background-color: nth($colorList, $i);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		// Minicart Area
+		.hm-minicart_area {
+			> ul {
+				> li {
+					.minicart-body {
+						> li {
+							.minicart-single_item {
+								.product-item_remove {
+									&:hover {
+										color: nth($colorList, $i);
+									}
+								}
+								.minicart-img {
+									&:hover {
+										border-color: nth($colorList, $i);
+									}
+								}
+							}
+							.price_content {
+								.minicart-button {
+									.torress-btn {
+										&:hover {
+											background-color: nth($colorList, $i);
+											color: $bg-white_color !important;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		// Default Slider Element Color
+		.main-slider {
+			.slider-content {
+				.torress-btn {
+					&:hover {
+						box-shadow: 0px 0 15px rgba(0, 0, 0, 0.2);
+						color: $bg-white_color !important;
+						background-color: nth($colorList, $i);
+					}
+				}
+			}
+			.slick-arrow {
+				color: nth($colorList, $i);
+			}
+		}
+		// Slick Dots Color
+		.slick-dots {
+			li {
+				&.slick-active {
+					background-color: nth($colorList, $i);
+				}
+				&:hover {
+					background-color: nth($colorList, $i);
+				}
+			}
+		}
+		// Torress's Product Slider Element Color
+		.torress-product_slider,
+		.torress-product_slider-2,
+		.torress-product-tab_slider,
+		.torress-product-tab_slider-2,
+		.torress-product-tab_slider-3,
+		.torress-content_wrapper {
+			.slide-item {
+				.single-product {
+					border: 1px solid $border-color;
+					.product-img {
+						.add-actions {
+							> ul {
+								> li {
+									> a {
+										&:hover {
+											background-color: nth($colorList, $i);
+										}
+									}
+								}
+							}
+						}
+					}
+					&:hover {
+						border-color: nth($colorList, $i);
+					}
+				}
+			}
+		}
+		// Torress's Product Tab Element Color
+		.torress-product-tab_area {
+			.banner-item {
+				border: 1px solid $border-color;
+			}
+			.tab-section_area {
+				.product-tab {
+					> ul {
+						&.product-menu {
+							> li {
+								> a {
+									> span {
+										&:before {
+											background-color: nth($colorList, $i);
+										}
+									}
+									&:hover {
+										color: nth($colorList, $i);
+									}
+									&.active {
+										> span {
+											@include breakpoint (xx-small) {
+												color: nth($colorList, $i);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		// Torress's Shipping Element Color
+		.torress-shipping_area {
+			.shipping-nav {
+				.shipping-item {
+					.shipping-icon {
+						color: nth($colorList, $i);
+					}
+				}
+			}
+		}
+		// Slider Navigation Element Color
+		.slider-navigation_style-1,
+		.slider-navigation_style-2,
+		.slider-navigation_style-3,
+		.slider-navigation_style-4 {
+			.slick-arrow {
+				&:hover {
+					background-color: nth($colorList, $i);
+				}
+			}
+		}
+		// Torress's Newsletter Form
+		.newsletter-form_wrap {
+			.subscribe-form {
+				.newsletter-btn {
+					background-color: $heading-color;
+					color: $bg-white_color;
+					&:hover {
+						background-color: nth($colorList, $i);
+						color: $bg-white_color;
+					}
+				}
+			}
+		}
+		// Modal Element Color
+		.modal-wrapper {
+			.modal-dialog {
+				.modal-content {
+					.modal-body {
+						.close {
+							&:hover {
+								border-color: nth($colorList, $i);
+								color: nth($colorList, $i);
+							}
+						}
+						.modal-inner-area {
+							.sp-img_slider-nav {
+								.slick-list {
+									.single-slide {
+										&:hover {
+											border-color: nth($colorList, $i);
+										}
+									}
+								}
+							}
+							.sp-content {
+								.quantity-area {
+									.quantity-btn {
+										> ul {
+											> li {
+												> a {
+													background-color: $body-text_color;
+													color: $bg-white_color;
+													> i {
+														font-size: 18px;
+													}
+													&:hover {
+														background: nth($colorList, $i);
+														color: $bg-white_color !important;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		// Social Link Element Color
+		.torress-social_link {
+			> ul {
+				> li {
+					> a {
+						&:hover {
+							background-color: nth($colorList, $i);
+						}
+					}
+				}
+			}
+		}
+		.footer-bottom_area {
+			.copyright {
+				> span {
+					> a {
+						color: nth($colorList, $i);
+					}
+				}
+			}
+		}
+		// Default ScrollUp Element Color
+		#scrollUp {
+			background-color: $heading-color;
+			color: $bg-white_color;
+			&:hover {
+				background-color: nth($colorList, $i);
+				border-color: nth($colorList, $i);
+				color: $bg-white_color !important;
+			}
+		}
+		// Torress's Tooltip
+		.tooltip-inner {
+			background-color: $heading-color;
+		}
+		.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before,
+		.tooltip.bs-tooltip-top .arrow::before {
+			border-top-color: $heading-color;
+		}
+		.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+		.bs-tooltip-bottom .arrow::before {
+			border-bottom-color: $heading-color;
+		}
+		// Torress's Preloader Element Color
+		.loading {
+			.middle {
+				.loader1 {
+					background-color: nth($colorList, $i);
+				}
+				.loader2 {
+					background-color: nth($colorList, $i);
+				}
+				.loader3 {
+					background-color: nth($colorList, $i);
+				}
+			}
+		}
+		// Color List Area
+		.color-list {
+			.single-color {
+				&.active {
+					border-color: nth($colorList, $i);
+				}
+			}
+		}
+		// Quick View Close Button Color
+		.modal-body {
+			.close {
+				&:hover {
+					color: nth($colorList, $i);
+				}
+			}
+		}
+		// Single Product Slider Area Border Color
+		.sp-slider {
+			.slide-item {
+				.single-product {
+					border: 1px solid $border-color;
+					&:hover {
+						border-color: nth($colorList, $i);
+					}
+				}
+			}
+		}
+		// Single Product Gallery Outline Color
+		.sp-gallery_area {
+			.sp-nav {
+				.sp-gallery {
+					.lg-image {
+						outline: 1px solid $border-color;
+						&:hover {
+							outline: 1px solid nth($colorList, $i);
+						}
+					}
+				}
+			}
+		}
+	}
+}
